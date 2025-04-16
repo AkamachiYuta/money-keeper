@@ -1,3 +1,9 @@
+## 0.0.1 (2025-04-16)
+
+### Add
+
+- 基本のページ、画面実装 ([0d36d07](https://github.com/AkamachiYuta/money-keeper/commit/0d36d0741f96ec528e4b407b32319a6cf63f203f))
+
 # INIT (2025-04-06)
 
 ### Develop
