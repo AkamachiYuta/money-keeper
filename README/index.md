@@ -51,7 +51,7 @@ QR コード決済は本当に便利なんでしょうか？
 
 ## 更新履歴
 
-[更新履歴]("./README/CHANGELOG.md")
+[更新履歴]("README/CHANGELOG.md")
 
 ### 更新履歴の書き方
 
