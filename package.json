@@ -1,7 +1,7 @@
 {
   "name": "money-keeper",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Keeper for your Wallet",
   "homepage": "https://github.com/AkamachiYuta/money-keeper#readme",
   "bugs": {
