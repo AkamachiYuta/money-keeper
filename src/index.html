@@ -12,8 +12,6 @@
   <link rel="preconnect" crossorigin="anonymous" href="https://fonts.gstatic.com">
   <link rel="stylesheet" crossorigin="anonymous"
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;900&display=swap" rel="stylesheet">
-  <!-- STYLE -->
-  <link rel="stylesheet" href="index.scss">
   <!-- TITLE -->
   <title>%__APP_TITLE__% - %__APP_VERSION__%</title>
 </head>
@@ -21,64 +19,124 @@
 <body>
 
   <body class="dark">
-    <!-- ナビゲーション -->
-    <nav class="left drawer l">
-      <header>
-        <nav>
-          <img src="vite.svg" class="circle">
-          <h6>%__APP_TITLE__%</h6>
-        </nav>
-      </header>
-      <a>
-        <i>home</i>
-        <div>ホーム</div>
-      </a>
-      <div class="divider"></div>
-      <label>Settings</label>
-      <a>
-        <i>settings</i>
-        <div>設定</div>
-      </a>
-      <a>
-        <i>help</i>
-        <div>Help</div>
-      </a>
-    </nav>
-
-    <nav class="left m">
-      <header>
-        <img src="vite.svg" class="circle">
-      </header>
-      <a>
-        <i>home</i>
-        <div>ホーム</div>
-      </a>
-      <div class="divider"></div>
-      <label>Settings</label>
-      <a>
-        <i>settings</i>
-        <div>設定</div>
-      </a>
-      <a>
-        <i>help</i>
-        <div>Help</div>
-      </a>
-    </nav>
+    <!-- タブバー -->
+    <header class="l m">
+      <nav>
+        <button data-ui="#nav-drawer" class="circle fill">
+          <i>menu</i>
+        </button>
+        <h5 class="max">%__APP_TITLE__%</h5>
+        <button data-ui="#page-home" class="fill">
+          <i>home</i>
+          <span>ホーム</span>
+        </button>
+        <button class="circle fill">
+          <i>more_vert</i>
+        </button>
+      </nav>
+    </header>
 
     <nav class="bottom s">
-      <a>
+      <a data-ui="#nav-drawer">
+        <i>menu</i>
+      </a>
+      <a data-ui="#page-home">
         <i>home</i>
       </a>
       <a>
-        <i>settings</i>
-      </a>
-      <a>
-        <i>help</i>
+        <i>more_vert</i>
       </a>
     </nav>
 
+    <dialog id="nav-drawer" class="left no-padding">
+      <nav class="drawer">
+        <div class="large-space"></div>
+        <header class="s">
+          <h5 class="max">%__APP_TITLE__%</h5>
+        </header>
+        <a data-ui="#page-home">
+          <i>home</i>
+          <span>ホーム</span>
+        </a>
+        <a data-ui="#page-settings">
+          <i>settings</i>
+          <span>設定</span>
+        </a>
+        <a data-ui="#page-about">
+          <i>info</i>
+          <span>%__APP_TITLE__%について</span>
+        </a>
+      </nav>
+    </dialog>
+
     <main class="responsive">
-      <h2>%__APP_TITLE__% is Keeper for your Wallet</h2>
+      <div id="pages">
+        <div class="large-space"></div>
+        <!-- ホームページ -->
+        <section id="page-home" class="page active">
+          <article>
+            <progress class="max inverse-primary-text" value="1802" max="3000"></progress>
+            <span>食費</span>
+            <h2 class="no-margin">1802円</h2>
+            <span>/ 3000円</span>
+          </article>
+        </section>
+        <!-- 設定ページ -->
+        <section id="page-settings" class="page">
+          <h2 class="center-align">設定</h2>
+          <article>
+            <i>info</i>
+            <div class="space"></div>
+            <div>現在、設定できる項目はありません</div>
+          </article>
+        </section>
+        <!-- このアプリについて -->
+        <section id="page-about" class="page">
+          <div class="grid">
+            <div class="l12">
+              <article class="fill">
+                <div class="row">
+                  <img class="circle large" src="icon/favicon.webp">
+                  <div class="max">
+                    <h6 class="bold">%__APP_TITLE__% (%__APP_VERSION__%)</h6>
+                    <div></div>
+                    <div>%__APP_DESCRIPTION__%</div>
+                    <div>Copyleft 🄯 ADE All Rights Reversed.</div>
+                  </div>
+                </div>
+                <nav>
+                  <a href="%__APP_REPOSITORY_URL__%" class="button">リポジトリ</a>
+                </nav>
+              </article>
+            </div>
+            <!-- プロバイダ -->
+            <div class="s12 m6 l4">
+              <article class="fill">
+                <div class="row">
+                  <img class="circle large" src="icon/icon_provider.svg">
+                  <div class="max">
+                    <h6 class="bold">%__APP_PROVIDER__%</h6>
+                    <span>開発者</span>
+                  </div>
+                </div>
+                <nav>
+                  <a href="%__APP_PROVIDER_URL__%" class="button">公式サイト</a>
+                </nav>
+              </article>
+            </div>
+            <div class="s12 m6 l4">
+              <article class="fill">
+                <div class="row">
+                  <i class="circle large">handshake</i>
+                  <div class="max">
+                    <h6 class="bold">協力者歓迎</h6>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
   </body>
   <script type="module" src="/main.ts"></script>
