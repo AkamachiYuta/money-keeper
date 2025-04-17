@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => {
     __APP_PROVIDER__: process.env.VITE_APP_PROVIDER ? process.env.VITE_APP_PROVIDER : "Unknown App Provider",
     __APP_PROVIDER_URL__: process.env.VITE_APP_PROVIDER_URL ? process.env.VITE_APP_PROVIDER_URL : "",
     __APP_DESCRIPTION__: packageJson.description ? packageJson.description : "",
-    __APP_REPOSITORY_URL__: packageJson.repository.url ? packageJson.repository.url : "",
+    __APP_REPOSITORY_URL__: packageJson.repository.url ? packageJson.repository.url.replace(/^git\+|\.git$/g, "") : "",
   }
   return {
     root: 'src',
