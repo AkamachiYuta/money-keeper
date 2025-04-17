@@ -16,129 +16,126 @@
   <title>%__APP_TITLE__% - %__APP_VERSION__%</title>
 </head>
 
-<body>
-
-  <body class="dark">
-    <!-- タブバー -->
-    <header class="l m">
-      <nav>
-        <button data-ui="#nav-drawer" class="circle fill">
-          <i>menu</i>
-        </button>
-        <h5 class="max">%__APP_TITLE__%</h5>
-        <button data-ui="#page-home" class="fill">
-          <i>home</i>
-          <span>ホーム</span>
-        </button>
-        <button class="circle fill">
-          <i>more_vert</i>
-        </button>
-      </nav>
-    </header>
-
-    <nav class="bottom s">
-      <a data-ui="#nav-drawer">
+<body class="dark">
+  <!-- タブバー -->
+  <header class="l m">
+    <nav>
+      <button data-ui="#nav-drawer" class="circle fill">
         <i>menu</i>
-      </a>
+      </button>
+      <h5 class="max">%__APP_TITLE__%</h5>
+      <button data-ui="#page-home" class="fill">
+        <i>home</i>
+        <span>ホーム</span>
+      </button>
+      <button class="circle fill">
+        <i>more_vert</i>
+      </button>
+    </nav>
+  </header>
+
+  <nav class="bottom s">
+    <a data-ui="#nav-drawer">
+      <i>menu</i>
+    </a>
+    <a data-ui="#page-home">
+      <i>home</i>
+    </a>
+    <a>
+      <i>more_vert</i>
+    </a>
+  </nav>
+
+  <dialog id="nav-drawer" class="left no-padding">
+    <nav class="drawer">
+      <div class="large-space"></div>
+      <header class="s">
+        <h5 class="max">%__APP_TITLE__%</h5>
+      </header>
       <a data-ui="#page-home">
         <i>home</i>
+        <span>ホーム</span>
       </a>
-      <a>
-        <i>more_vert</i>
+      <a data-ui="#page-settings">
+        <i>settings</i>
+        <span>設定</span>
+      </a>
+      <a data-ui="#page-about">
+        <i>info</i>
+        <span>%__APP_TITLE__%について</span>
       </a>
     </nav>
+  </dialog>
 
-    <dialog id="nav-drawer" class="left no-padding">
-      <nav class="drawer">
-        <div class="large-space"></div>
-        <header class="s">
-          <h5 class="max">%__APP_TITLE__%</h5>
-        </header>
-        <a data-ui="#page-home">
-          <i>home</i>
-          <span>ホーム</span>
-        </a>
-        <a data-ui="#page-settings">
-          <i>settings</i>
-          <span>設定</span>
-        </a>
-        <a data-ui="#page-about">
+  <main class="responsive">
+    <div id="pages">
+      <div class="large-space"></div>
+      <!-- ホームページ -->
+      <section id="page-home" class="page active">
+        <article>
+          <progress class="max inverse-primary-text" value="1802" max="3000"></progress>
+          <span>食費</span>
+          <h2 class="no-margin">1802円</h2>
+          <span>/ 3000円</span>
+        </article>
+      </section>
+      <!-- 設定ページ -->
+      <section id="page-settings" class="page">
+        <h2 class="center-align">設定</h2>
+        <article>
           <i>info</i>
-          <span>%__APP_TITLE__%について</span>
-        </a>
-      </nav>
-    </dialog>
-
-    <main class="responsive">
-      <div id="pages">
-        <div class="large-space"></div>
-        <!-- ホームページ -->
-        <section id="page-home" class="page active">
-          <article>
-            <progress class="max inverse-primary-text" value="1802" max="3000"></progress>
-            <span>食費</span>
-            <h2 class="no-margin">1802円</h2>
-            <span>/ 3000円</span>
-          </article>
-        </section>
-        <!-- 設定ページ -->
-        <section id="page-settings" class="page">
-          <h2 class="center-align">設定</h2>
-          <article>
-            <i>info</i>
-            <div class="space"></div>
-            <div>現在、設定できる項目はありません</div>
-          </article>
-        </section>
-        <!-- このアプリについて -->
-        <section id="page-about" class="page">
-          <div class="grid">
-            <div class="s12">
-              <article class="fill">
-                <div class="row">
-                  <img class="circle large" src="icon/favicon.webp">
-                  <div class="max">
-                    <h6 class="bold">%__APP_TITLE__% (%__APP_VERSION__%)</h6>
-                    <div></div>
-                    <div>%__APP_DESCRIPTION__%</div>
-                    <div>Copyleft 🄯 ADE All Rights Reversed.</div>
-                  </div>
+          <div class="space"></div>
+          <div>現在、設定できる項目はありません</div>
+        </article>
+      </section>
+      <!-- このアプリについて -->
+      <section id="page-about" class="page">
+        <div class="grid">
+          <div class="s12">
+            <article class="fill">
+              <div class="row">
+                <img class="circle large" src="icon/favicon.webp">
+                <div class="max">
+                  <h6 class="bold">%__APP_TITLE__% (%__APP_VERSION__%)</h6>
+                  <div></div>
+                  <div>%__APP_DESCRIPTION__%</div>
+                  <div>Copyleft 🄯 ADE All Rights Reversed.</div>
                 </div>
-                <nav>
-                  <a href="%__APP_REPOSITORY_URL__%" class="button">リポジトリ</a>
-                </nav>
-              </article>
-            </div>
-            <!-- プロバイダ -->
-            <div class="s12 m6 l4">
-              <article class="fill">
-                <div class="row">
-                  <img class="circle large" src="icon/icon_provider.svg">
-                  <div class="max">
-                    <h6 class="bold">%__APP_PROVIDER__%</h6>
-                    <span>開発者</span>
-                  </div>
-                </div>
-                <nav>
-                  <a href="%__APP_PROVIDER_URL__%" class="button">公式サイト</a>
-                </nav>
-              </article>
-            </div>
-            <div class="s12 m6 l4">
-              <article class="fill">
-                <div class="row">
-                  <i class="circle large">handshake</i>
-                  <div class="max">
-                    <h6 class="bold">協力者歓迎</h6>
-                  </div>
-                </div>
-              </article>
-            </div>
+              </div>
+              <nav>
+                <a href="%__APP_REPOSITORY_URL__%" class="button">リポジトリ</a>
+              </nav>
+            </article>
           </div>
-        </section>
-      </div>
-    </main>
-  </body>
+          <!-- プロバイダ -->
+          <div class="s12 m6 l4">
+            <article class="fill">
+              <div class="row">
+                <img class="circle large" src="icon/icon_provider.svg">
+                <div class="max">
+                  <h6 class="bold">%__APP_PROVIDER__%</h6>
+                  <span>開発者</span>
+                </div>
+              </div>
+              <nav>
+                <a href="%__APP_PROVIDER_URL__%" class="button">公式サイト</a>
+              </nav>
+            </article>
+          </div>
+          <div class="s12 m6 l4">
+            <article class="fill">
+              <div class="row">
+                <i class="circle large">handshake</i>
+                <div class="max">
+                  <h6 class="bold">協力者歓迎</h6>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
   <script type="module" src="/main.ts"></script>
 </body>
 
