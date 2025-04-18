@@ -1,6 +1,6 @@
-import { defineConfig, loadEnv } from 'vite';
+import { defineConfig, loadEnv } from "vite";
 import { viteSingleFile } from "vite-plugin-singlefile";
-import packageJson from './package.json'
+import packageJson from "./package.json";
 
 export default defineConfig(({ mode }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
@@ -12,11 +12,11 @@ export default defineConfig(({ mode }) => {
     __APP_PROVIDER_URL__: process.env.VITE_APP_PROVIDER_URL ? process.env.VITE_APP_PROVIDER_URL : "",
     __APP_DESCRIPTION__: packageJson.description ? packageJson.description : "",
     __APP_REPOSITORY_URL__: packageJson.repository.url ? packageJson.repository.url.replace(/^git\+|\.git$/g, "") : "",
-  }
+  };
   return {
-    root: 'src',
+    root: "src",
     build: {
-      outDir: '../dist',
+      outDir: "../dist",
       emptyOutDir: true,
     },
     server: {
@@ -37,5 +37,5 @@ export default defineConfig(({ mode }) => {
     define: Object.fromEntries(
       Object.entries(define).map(([key, val]) => [key, JSON.stringify(val)])
     ),
-  }
+  };
 });
