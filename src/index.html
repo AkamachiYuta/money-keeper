@@ -16,7 +16,7 @@
   <title>%__APP_TITLE__% - %__APP_VERSION__%</title>
 </head>
 
-<body class="dark">
+<body>
   <!-- タブバー -->
   <header class="l m">
     <nav>
@@ -27,6 +27,9 @@
       <button data-ui="#page-home" class="fill">
         <i>home</i>
         <span>ホーム</span>
+      </button>
+      <button data-user="themeMode" class="circle fill">
+        <i></i>
       </button>
       <button class="circle fill">
         <i>more_vert</i>
@@ -40,6 +43,9 @@
     </a>
     <a data-ui="#page-home">
       <i>home</i>
+    </a>
+    <a data-user="themeMode">
+      <i></i>
     </a>
     <a>
       <i>more_vert</i>
@@ -83,9 +89,15 @@
       <section id="page-settings" class="page">
         <h2 class="center-align">設定</h2>
         <article>
-          <i>info</i>
-          <div class="space"></div>
-          <div>現在、設定できる項目はありません</div>
+          <span>テーマカラー</span>
+          <div class="button circle">
+            <input id="userColorPicker" type="color">
+            <label><i>palette</i></label>
+          </div>
+          <!-- <div class="button circle">
+            <input id="userColorFile" type="file" accept="image/*">
+            <label><i>image</i></label>
+          </div> -->
         </article>
       </section>
       <!-- このアプリについて -->
