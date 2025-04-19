@@ -39,6 +39,7 @@
     "sass": "^1.86.3",
     "svelte": "^5.28.1",
     "svelte-routing": "^2.13.0",
+    "terser": "^5.39.0",
     "typescript": "~5.8.3",
     "vite": "^6.3.2",
     "vite-plugin-singlefile": "^2.2.0"

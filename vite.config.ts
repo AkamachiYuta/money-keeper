@@ -18,7 +18,9 @@ export default defineConfig(({ mode }) => {
     root: "src",
     build: {
       outDir: "../dist",
+      minify: "terser",
       emptyOutDir: true,
+      copyPublicDir: true,
     },
     server: {
       port: 4810,
