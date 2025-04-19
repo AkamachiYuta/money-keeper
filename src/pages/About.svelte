@@ -5,7 +5,7 @@
     <div class="s12">
       <article class="fill">
         <div class="row">
-          <img class="circle large" src="icon/favicon.webp" alt="" />
+          <img class="circle large" src="assets/favicon.webp" alt="" />
           <div class="max">
             <h6 class="bold">
               {APP_TITLE} - {APP_VERSION}
@@ -24,7 +24,7 @@
     <div class="s12 m6 l4">
       <article class="fill">
         <div class="row">
-          <img class="circle large" src="icon/icon_provider.svg" alt="" />
+          <img class="circle large" src="assets/icon_provider.svg" alt="" />
           <div class="max">
             <h6 class="bold">{APP_PROVIDER}</h6>
             <span>開発者</span>
