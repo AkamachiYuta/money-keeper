@@ -1,11 +1,14 @@
-<script lang="ts"></script>
+<script lang="ts">
+  import assetsFavicon from "../assets/favicon.webp";
+  import assetsIconProvider from "../assets/icon_provider.svg";
+</script>
 
 <section id="page-about">
   <div class="grid">
     <div class="s12">
       <article class="fill">
         <div class="row">
-          <img class="circle large" src="assets/favicon.webp" alt="" />
+          <img class="circle large" src={assetsFavicon} alt="" />
           <div class="max">
             <h6 class="bold">
               {APP_TITLE} - {APP_VERSION}
@@ -24,7 +27,7 @@
     <div class="s12 m6 l4">
       <article class="fill">
         <div class="row">
-          <img class="circle large" src="assets/icon_provider.svg" alt="" />
+          <img class="circle large" src={assetsIconProvider} alt="" />
           <div class="max">
             <h6 class="bold">{APP_PROVIDER}</h6>
             <span>開発者</span>
