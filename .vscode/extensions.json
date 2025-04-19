@@ -5,6 +5,7 @@
     "bierner.markdown-preview-github-styles",
     "bierner.markdown-checkbox",
     "svelte.svelte-vscode",
-    "redhat.vscode-yaml"
+    "redhat.vscode-yaml",
+    "github.vscode-github-actions"
   ]
 }
