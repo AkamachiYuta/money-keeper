@@ -20,7 +20,7 @@
     </button>
     <Link to="/" class="button fill l m">
       <i>dashboard</i>
-      <span>ダッシュボート</span>
+      <span>ダッシュボード</span>
     </Link>
     <ThemeModeChange />
     <!-- <a class="button circle fill">
@@ -54,7 +54,7 @@
       </header>
       <Link to="/" onclick={onclickNavDrawer}>
         <i>dashboard</i>
-        <span>ダッシュボート</span>
+        <span>ダッシュボード</span>
       </Link>
       <Link to="/" onclick={onclickNavDrawer}>
         <i>timeline</i>
