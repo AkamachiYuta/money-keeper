@@ -1,3 +1,13 @@
+## [0.0.3](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.2...v0.0.3) (2025-04-19)
+
+
+### Develop
+
+* browserlistを別ファイル化 ([cf85682](https://github.com/AkamachiYuta/money-keeper/commit/cf8568287e413fe13f03727533a2a525d7a2244e))
+* Svelte導入 ([5c7931c](https://github.com/AkamachiYuta/money-keeper/commit/5c7931c467203637ac4af41f633116e792fb5e3f))
+
+
+
 ## [0.0.2](https://github.com/AkamachiYuta/money-keeper/compare/0.0.1...0.0.2) (2025-04-18)
 
 
