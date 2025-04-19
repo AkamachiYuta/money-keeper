@@ -1,3 +1,23 @@
+## [0.0.5](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.4...v0.0.5) (2025-04-19)
+
+
+### Change
+
+* iconフォルダをassetsフォルダに変更 ([5f948ba](https://github.com/AkamachiYuta/money-keeper/commit/5f948ba0ad5f008855d4230869ebdd2151be80be))
+
+### Develop
+
+* GitHub Pagesにデプロイ結果を出力 ([0b46c7e](https://github.com/AkamachiYuta/money-keeper/commit/0b46c7ecf7d4d3e3d2b748f2e8c223033da4970c))
+* terser導入 ([26ca194](https://github.com/AkamachiYuta/money-keeper/commit/26ca1944015e3fa0d4f1c7c8fbbe013e00ce337f))
+
+### Fix
+
+* ダッシュボードの表記が「ダッシュボート」になっていたのを修正 ([686ca85](https://github.com/AkamachiYuta/money-keeper/commit/686ca85938d4a2c786874120d712a8e0c88abb92))
+* ビルド時にアセットが正常に読み込まれない不具合を修正 ([fb409ee](https://github.com/AkamachiYuta/money-keeper/commit/fb409ee458b92b47e51d1d219226edb52c766bb6))
+* ローカルストレージに保存されたテーマが正しく適用されない不具合を修正 ([ed4c08e](https://github.com/AkamachiYuta/money-keeper/commit/ed4c08ea9b78b12e64d2cdb87a9a4e6b628b0592))
+
+
+
 ## [0.0.4](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.3...v0.0.4) (2025-04-19)
 
 
