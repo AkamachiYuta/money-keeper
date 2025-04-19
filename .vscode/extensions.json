@@ -6,6 +6,7 @@
     "bierner.markdown-checkbox",
     "svelte.svelte-vscode",
     "redhat.vscode-yaml",
-    "github.vscode-github-actions"
+    "github.vscode-github-actions",
+    "editorconfig.editorconfig"
   ]
 }
