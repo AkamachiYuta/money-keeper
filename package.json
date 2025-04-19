@@ -41,13 +41,5 @@
     "typescript": "~5.8.3",
     "vite": "^6.3.2",
     "vite-plugin-singlefile": "^2.2.0"
-  },
-  "browserslist": [
-    "last 2 Chrome versions",
-    "last 2 FireFox versions",
-    "last 1 ChromeAndroid versions",
-    "last 1 FireFoxAndroid versions",
-    "last 1 android versions",
-    "not dead"
-  ]
+  }
 }
