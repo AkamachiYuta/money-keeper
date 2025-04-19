@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "webben.browserslist",
+    "evertonbuzzi.beercss-snippet",
+    "bierner.markdown-preview-github-styles",
+    "bierner.markdown-checkbox",
+    "svelte.svelte-vscode",
+    "redhat.vscode-yaml"
+  ]
+}
