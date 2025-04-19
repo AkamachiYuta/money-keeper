@@ -1,3 +1,16 @@
+## [0.0.4](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.3...v0.0.4) (2025-04-19)
+
+
+### Add
+
+* ルーティングの導入によるページごとのパスの付与、およびページごとのソースファイルを分割 ([ce8db90](https://github.com/AkamachiYuta/money-keeper/commit/ce8db90c239f8e83e28f40278b84cf3f207f0b48))
+
+### Change
+
+* テーマモードが変わるときになめらかに変化するよう変更 ([d006537](https://github.com/AkamachiYuta/money-keeper/commit/d006537af3364a8832de69622b9192329c041baf))
+
+
+
 ## [0.0.3](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.2...v0.0.3) (2025-04-19)
 
 
