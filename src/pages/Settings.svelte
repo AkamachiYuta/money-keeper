@@ -1,11 +1,5 @@
 <script lang="ts">
-  // テーマカラー
-  const userTheme = (userThemeColor: string = "#000000") => {
-    ui("theme", userThemeColor);
-    localStorage.setItem("userThemeColor", userThemeColor);
-  };
-  // 初期値またはローカルストレージからセット
-  userTheme(localStorage.getItem("userThemeColor") ?? undefined);
+  import { userTheme } from "../components/theme";
 
   const oninputUserColor = (event: Event) => {
     const userColorPicker = (<HTMLInputElement>event.currentTarget).value;
