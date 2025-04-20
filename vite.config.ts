@@ -21,6 +21,7 @@ export default defineConfig(({ mode }) => {
       minify: "terser",
       emptyOutDir: true,
       copyPublicDir: true,
+      base: `/${packageJson.name}/`,
     },
     server: {
       port: 4810,
