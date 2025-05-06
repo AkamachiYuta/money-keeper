@@ -1,3 +1,18 @@
+## [0.0.8](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.7...v0.0.8) (2025-05-06)
+
+
+### Add
+
+* イントロダクションページを追加 ([d4fa147](https://github.com/AkamachiYuta/money-keeper/commit/d4fa147fe9eade26bcbdf38b07a463cdfecd03b9))
+* 各種フォントを指定、同梱 ([0568813](https://github.com/AkamachiYuta/money-keeper/commit/0568813813ac7a337480f41fff655dae97b21601))
+
+### Change
+
+* Introductionで使用する画像をWEBPに置き換え ([3f3196c](https://github.com/AkamachiYuta/money-keeper/commit/3f3196c1fe408912bee8dac0bdb6dde14ab822ea))
+* ダッシュボードのパスはdashboardに変更。および相対パスの不具合を修正 ([b8f8aee](https://github.com/AkamachiYuta/money-keeper/commit/b8f8aee3bcf55bb12d92d7bd5ca015070999ddee))
+
+
+
 ## [0.0.7](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.6...v0.0.7) (2025-05-06)
 
 
