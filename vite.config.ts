@@ -1,6 +1,5 @@
 import { defineConfig, loadEnv } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte"
-import { viteSingleFile } from "vite-plugin-singlefile";
 import packageJson from "./package.json";
 
 export default defineConfig(({ mode }) => {
@@ -13,11 +12,12 @@ export default defineConfig(({ mode }) => {
     APP_PROVIDER_URL: process.env.VITE_APP_PROVIDER_URL ? process.env.VITE_APP_PROVIDER_URL : "",
     APP_DESCRIPTION: packageJson.description ? packageJson.description : "",
     APP_REPOSITORY_URL: packageJson.repository.url ? packageJson.repository.url.replace(/^git\+|\.git$/g, "") : "",
+    APP_REPOSITORY_NAME: packageJson.repository.url ? packageJson.repository.url.replace(/^git\+|\.git$/g, "").replace(/^https:\/\/github.com\/.*\//, "") : "",
   };
   return {
     root: "src",
     base: process.env.GITHUB_PAGES
-      ? `${define.APP_REPOSITORY_URL}/`
+      ? `${define.APP_REPOSITORY_NAME}/`
       : "/",
     build: {
       outDir: "../dist",
@@ -26,7 +26,10 @@ export default defineConfig(({ mode }) => {
       copyPublicDir: true,
     },
     server: {
-      port: 4810,
+      port: 3123,
+    },
+    preview: {
+      port: 3123,
     },
     plugins: [
       {
@@ -39,7 +42,6 @@ export default defineConfig(({ mode }) => {
         },
       },
       svelte(),
-      viteSingleFile(),
     ],
     define: Object.fromEntries(
       Object.entries(define).map(([key, val]) => [key, JSON.stringify(val)])
