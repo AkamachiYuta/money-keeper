@@ -1,7 +1,7 @@
 <script lang="ts">
   import { navigate } from "svelte-routing";
-  import Img01 from "../assets/Introduction/01.png";
-  import Img02 from "../assets/Introduction/02.png";
+  import Img01 from "../assets/Introduction/01.webp";
+  import Img02 from "../assets/Introduction/02.webp";
 
   const getStart = () => {
     navigate("dashboard");
@@ -10,6 +10,7 @@
 
 <section id="page-introduction">
   <h2>お財布を守るアプリ「MoneyKeeper」</h2>
+  <div class="large-space"></div>
 
   <article class="no-padding">
     <div class="grid no-space">
