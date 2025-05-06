@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Router, Route } from "svelte-routing";
   import Header from "./components/Header.svelte";
+  import Introduction from "./pages/Introduction.svelte";
   import DashBoard from "./pages/Dashboard.svelte";
   import Settings from "./pages/Settings.svelte";
   import About from "./pages/About.svelte";
@@ -14,6 +15,10 @@
     <Header />
     <main class="responsive">
       <div class="large-space"></div>
+      <Route path="/">
+        <!-- ダッシュボード -->
+        <Introduction />
+      </Route>
       <Route path="dashboard">
         <!-- ダッシュボード -->
         <DashBoard />
@@ -27,7 +32,7 @@
         <About />
       </Route>
       <!-- NotFound -->
-      <Route path="*" component={NotFound} />
+      <Route path="/*" component={NotFound} />
     </main>
   </Router>
 </div>
