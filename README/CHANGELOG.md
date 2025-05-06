@@ -1,3 +1,17 @@
+## [0.0.7](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.6...v0.0.7) (2025-05-06)
+
+
+### Add
+
+* 現在表示されているページに合わせてタブバーのボタンとナビゲーションドロワーのボタンを強調 ([4d42d82](https://github.com/AkamachiYuta/money-keeper/commit/4d42d82944a9f68cb9c2a02da675b373a668af64))
+
+### Change
+
+* Linkタグをaタグでの指定に変更 ([3da9aef](https://github.com/AkamachiYuta/money-keeper/commit/3da9aefb8e597bf4af1908e147d8d3f621513bfc))
+* デザイン微調整、未実装ボタンの削除、コード整理など ([3a8d0a8](https://github.com/AkamachiYuta/money-keeper/commit/3a8d0a8e9ab284dffbc701d0d2c5ea7b92d28188))
+
+
+
 ## [0.0.6](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.5...v0.0.6) (2025-05-06)
 
 
