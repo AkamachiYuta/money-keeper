@@ -6,7 +6,7 @@
   import About from "./pages/About.svelte";
   import NotFound from "./pages/NotFound.svelte";
 
-  export let basepath = import.meta.env.BASE_URL;
+  const basepath = import.meta.env.BASE_URL;
 </script>
 
 <div>
@@ -14,20 +14,20 @@
     <Header />
     <main class="responsive">
       <div class="large-space"></div>
-      <Route path="/">
+      <Route path="dashboard">
         <!-- ダッシュボード -->
         <DashBoard />
       </Route>
       <!-- 設定ページ -->
-      <Route path="/settings">
+      <Route path="settings">
         <Settings />
       </Route>
       <!-- このアプリについて -->
-      <Route path="/about">
+      <Route path="about">
         <About />
       </Route>
       <!-- NotFound -->
-      <Route path="/*" component={NotFound} />
+      <Route path="*" component={NotFound} />
     </main>
   </Router>
 </div>
