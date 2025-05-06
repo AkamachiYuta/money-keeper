@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Link } from "svelte-routing";
+  import { link } from "svelte-routing";
   import ThemeModeChange from "./ThemeModeChange.svelte";
 
   // ナビゲーションドロワーのリンクがクリックされたとき
@@ -18,10 +18,10 @@
     <button class="square round extra l m">
       <i>add</i>
     </button>
-    <Link to="/" class="button fill l m">
+    <a href="/" class="button fill l m" use:link>
       <i>dashboard</i>
       <span>ダッシュボード</span>
-    </Link>
+    </a>
     <ThemeModeChange />
     <!-- <a class="button circle fill">
       <i>more_vert</i>
@@ -29,21 +29,21 @@
   </nav>
   <!-- タブバー（スマホ） -->
   <nav class="bottom s">
-    <Link to="/">
+    <a href="/" use:link>
       <i>dashboard</i>
-    </Link>
-    <Link to="/">
+    </a>
+    <a href="/" use:link>
       <i>timeline</i>
-    </Link>
+    </a>
     <button class="square round extra s">
       <i>add</i>
     </button>
-    <Link to="/">
+    <a href="/" use:link>
       <i>calendar_month</i>
-    </Link>
-    <Link to="/">
+    </a>
+    <a href="/" use:link>
       <i>pie_chart</i>
-    </Link>
+    </a>
   </nav>
 
   <dialog id="nav-drawer" class="left no-padding">
@@ -52,30 +52,30 @@
       <header>
         <h5 class="max">{APP_TITLE}</h5>
       </header>
-      <Link to="/" onclick={onclickNavDrawer}>
+      <a href="/" onclick={onclickNavDrawer} use:link>
         <i>dashboard</i>
         <span>ダッシュボード</span>
-      </Link>
-      <Link to="/" onclick={onclickNavDrawer}>
+      </a>
+      <a href="/" onclick={onclickNavDrawer} use:link>
         <i>timeline</i>
         <span>タイムライン</span>
-      </Link>
-      <Link to="/" onclick={onclickNavDrawer}>
+      </a>
+      <a href="/" onclick={onclickNavDrawer} use:link>
         <i>calendar_month</i>
         <span>カレンダー</span>
-      </Link>
-      <Link to="/" onclick={onclickNavDrawer}>
+      </a>
+      <a href="/" onclick={onclickNavDrawer} use:link>
         <i>pie_chart</i>
         <span>グラフ</span>
-      </Link>
-      <Link to="/settings" onclick={onclickNavDrawer}>
+      </a>
+      <a href="/settings" onclick={onclickNavDrawer} use:link>
         <i>settings</i>
         <span>設定</span>
-      </Link>
-      <Link to="/about" onclick={onclickNavDrawer}>
+      </a>
+      <a href="/about" onclick={onclickNavDrawer} use:link>
         <i>info</i>
         <span>{APP_TITLE}について</span>
-      </Link>
+      </a>
     </nav>
   </dialog>
 </header>
