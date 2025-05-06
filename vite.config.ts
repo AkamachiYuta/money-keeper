@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => {
   return {
     root: "src",
     base: process.env.GITHUB_PAGES
-      ? `${define.APP_REPOSITORY_NAME}/`
+      ? `/${define.APP_REPOSITORY_NAME}/`
       : "/",
     build: {
       outDir: "../dist",

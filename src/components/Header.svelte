@@ -1,27 +1,41 @@
 <script lang="ts">
-  import { Link } from "svelte-routing";
+  import { link } from "svelte-routing";
   import ThemeModeChange from "./ThemeModeChange.svelte";
+
+  let path = $state(location.pathname);
 
   // ナビゲーションドロワーのリンクがクリックされたとき
   const onclickNavDrawer = () => {
     ui("#nav-drawer");
+  };
+
+  // リンクが押されたときにパスを更新する
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("a:not(.button)[href]").forEach((link) => {
+      link.addEventListener("click", () => (path = location.pathname));
+    });
+  });
+
+  // 現在のページパスかどうかを判定する
+  const isActivePath = (href: string | any[]) => {
+    return path === href;
   };
 </script>
 
 <header>
   <!-- アプリバー -->
   <nav class="">
-    <button class="circle" onclick={onclickNavDrawer}>
+    <button class="circle transparent" onclick={onclickNavDrawer}>
       <i>menu</i>
     </button>
     <div class="max"></div>
-    <button class="square round extra l m">
+    <button class="square round l m">
       <i>add</i>
     </button>
-    <Link to="/" class="button fill l m">
+    <a href="/" class="button fill l m" use:link>
       <i>dashboard</i>
       <span>ダッシュボード</span>
-    </Link>
+    </a>
     <ThemeModeChange />
     <!-- <a class="button circle fill">
       <i>more_vert</i>
@@ -29,21 +43,21 @@
   </nav>
   <!-- タブバー（スマホ） -->
   <nav class="bottom s">
-    <Link to="/">
+    <a href="/" class:active={isActivePath("/")} use:link>
       <i>dashboard</i>
-    </Link>
-    <Link to="/">
+    </a>
+    <!-- <a href="/" class:active={isActivePath("/")} use:link>
       <i>timeline</i>
-    </Link>
-    <button class="square round extra s">
+    </a> -->
+    <!-- <button class="square round extra s">
       <i>add</i>
-    </button>
-    <Link to="/">
+    </button> -->
+    <!-- <a href="/" class:active={isActivePath("/")} use:link>
       <i>calendar_month</i>
-    </Link>
-    <Link to="/">
+    </a>
+    <a href="/" class:active={isActivePath("/")} use:link>
       <i>pie_chart</i>
-    </Link>
+    </a> -->
   </nav>
 
   <dialog id="nav-drawer" class="left no-padding">
@@ -52,30 +66,60 @@
       <header>
         <h5 class="max">{APP_TITLE}</h5>
       </header>
-      <Link to="/" onclick={onclickNavDrawer}>
+      <a
+        href="/"
+        class:active={isActivePath("/")}
+        onclick={onclickNavDrawer}
+        use:link
+      >
         <i>dashboard</i>
         <span>ダッシュボード</span>
-      </Link>
-      <Link to="/" onclick={onclickNavDrawer}>
+      </a>
+      <!-- <a
+        href="/"
+        class:active={isActivePath("/")}
+        onclick={onclickNavDrawer}
+        use:link
+      >
         <i>timeline</i>
         <span>タイムライン</span>
-      </Link>
-      <Link to="/" onclick={onclickNavDrawer}>
+      </a> -->
+      <!-- <a
+        href="/"
+        class:active={isActivePath("/")}
+        onclick={onclickNavDrawer}
+        use:link
+      >
         <i>calendar_month</i>
         <span>カレンダー</span>
-      </Link>
-      <Link to="/" onclick={onclickNavDrawer}>
+      </a> -->
+      <!-- <a
+        href="/"
+        class:active={isActivePath("/")}
+        onclick={onclickNavDrawer}
+        use:link
+      >
         <i>pie_chart</i>
         <span>グラフ</span>
-      </Link>
-      <Link to="/settings" onclick={onclickNavDrawer}>
+      </a> -->
+      <a
+        href="/settings"
+        class:active={isActivePath("/settings")}
+        onclick={onclickNavDrawer}
+        use:link
+      >
         <i>settings</i>
         <span>設定</span>
-      </Link>
-      <Link to="/about" onclick={onclickNavDrawer}>
+      </a>
+      <a
+        href="/about"
+        class:active={isActivePath("/about")}
+        onclick={onclickNavDrawer}
+        use:link
+      >
         <i>info</i>
         <span>{APP_TITLE}について</span>
-      </Link>
+      </a>
     </nav>
   </dialog>
 </header>
