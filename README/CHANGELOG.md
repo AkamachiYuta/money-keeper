@@ -1,3 +1,22 @@
+## [0.0.6](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.5...v0.0.6) (2025-05-06)
+
+
+### Add
+
+* NotFoundページを追加 ([6e60fca](https://github.com/AkamachiYuta/money-keeper/commit/6e60fcaf03d5b44117ba4ebe1c1eec3de35611ce))
+
+### Develop
+
+* NPMパッケージアップデート ([f4dc619](https://github.com/AkamachiYuta/money-keeper/commit/f4dc619df1bbf12710cba9ee33f74d16a9a34b5f))
+* シングルファイルでのビルドを廃止 ([07f112b](https://github.com/AkamachiYuta/money-keeper/commit/07f112bcc216874cc24112ca0ab95ad2608787b5))
+* ローカルサーバーのポート番号を変更 ([4384405](https://github.com/AkamachiYuta/money-keeper/commit/4384405af70284789c36b578098931edf9666ff1))
+
+### Fix
+
+* ベースパス変更時にルーティングが正常に動作しない不具合を修正 ([eeed378](https://github.com/AkamachiYuta/money-keeper/commit/eeed37880facd99c17dbd23f5ddc6e0bec913be0))
+
+
+
 ## [0.0.5](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.4...v0.0.5) (2025-04-19)
 
 
