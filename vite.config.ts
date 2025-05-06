@@ -1,6 +1,5 @@
 import { defineConfig, loadEnv } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte"
-import { viteSingleFile } from "vite-plugin-singlefile";
 import packageJson from "./package.json";
 
 export default defineConfig(({ mode }) => {
@@ -43,7 +42,6 @@ export default defineConfig(({ mode }) => {
         },
       },
       svelte(),
-      viteSingleFile(),
     ],
     define: Object.fromEntries(
       Object.entries(define).map(([key, val]) => [key, JSON.stringify(val)])
