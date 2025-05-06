@@ -11,11 +11,11 @@
 <header>
   <!-- アプリバー -->
   <nav class="">
-    <button class="circle" onclick={onclickNavDrawer}>
+    <button class="circle transparent" onclick={onclickNavDrawer}>
       <i>menu</i>
     </button>
     <div class="max"></div>
-    <button class="square round extra l m">
+    <button class="square round l m">
       <i>add</i>
     </button>
     <a href="/" class="button fill l m" use:link>
@@ -27,25 +27,27 @@
       <i>more_vert</i>
     </a> -->
   </nav>
+
   <!-- タブバー（スマホ） -->
   <nav class="bottom s">
     <a href="/" use:link>
       <i>dashboard</i>
     </a>
-    <a href="/" use:link>
+    <!-- <a href="/" use:link>
       <i>timeline</i>
-    </a>
-    <button class="square round extra s">
+    </a> -->
+    <!-- <button class="square round extra s">
       <i>add</i>
-    </button>
-    <a href="/" use:link>
+    </button> -->
+    <!-- <a href="/" use:link>
       <i>calendar_month</i>
     </a>
     <a href="/" use:link>
       <i>pie_chart</i>
-    </a>
+    </a> -->
   </nav>
 
+  <!-- ナビゲーションドロワー -->
   <dialog id="nav-drawer" class="left no-padding">
     <nav class="drawer">
       <div class="large-space"></div>
@@ -56,18 +58,18 @@
         <i>dashboard</i>
         <span>ダッシュボード</span>
       </a>
-      <a href="/" onclick={onclickNavDrawer} use:link>
+      <!-- <a href="/" onclick={onclickNavDrawer} use:link>
         <i>timeline</i>
         <span>タイムライン</span>
-      </a>
-      <a href="/" onclick={onclickNavDrawer} use:link>
+      </a> -->
+      <!-- <a href="/" onclick={onclickNavDrawer} use:link>
         <i>calendar_month</i>
         <span>カレンダー</span>
-      </a>
-      <a href="/" onclick={onclickNavDrawer} use:link>
+      </a> -->
+      <!-- <a href="/" onclick={onclickNavDrawer} use:link>
         <i>pie_chart</i>
         <span>グラフ</span>
-      </a>
+      </a> -->
       <a href="/settings" onclick={onclickNavDrawer} use:link>
         <i>settings</i>
         <span>設定</span>
