@@ -8,3 +8,4 @@ declare const APP_PROVIDER: string;
 declare const APP_PROVIDER_URL: string;
 declare const APP_DESCRIPTION: string;
 declare const APP_REPOSITORY_URL: string;
+declare const APP_REPOSITORY_NAME: string;

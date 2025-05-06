@@ -13,11 +13,12 @@ export default defineConfig(({ mode }) => {
     APP_PROVIDER_URL: process.env.VITE_APP_PROVIDER_URL ? process.env.VITE_APP_PROVIDER_URL : "",
     APP_DESCRIPTION: packageJson.description ? packageJson.description : "",
     APP_REPOSITORY_URL: packageJson.repository.url ? packageJson.repository.url.replace(/^git\+|\.git$/g, "") : "",
+    APP_REPOSITORY_NAME: packageJson.repository.url ? packageJson.repository.url.replace(/^git\+|\.git$/g, "").replace(/^https:\/\/github.com\/.*\//, "") : "",
   };
   return {
     root: "src",
     base: process.env.GITHUB_PAGES
-      ? `${define.APP_REPOSITORY_URL}/`
+      ? `${define.APP_REPOSITORY_NAME}/`
       : "/",
     build: {
       outDir: "../dist",
