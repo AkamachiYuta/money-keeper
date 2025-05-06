@@ -30,9 +30,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          version: 23.11.0
+          node-version: latest/*
+          cache: "npm"
       - name: Install dependencies
         run: npm ci
       - name: Build

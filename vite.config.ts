@@ -16,12 +16,14 @@ export default defineConfig(({ mode }) => {
   };
   return {
     root: "src",
+    base: process.env.GITHUB_PAGES
+      ? `${define.APP_REPOSITORY_URL}/`
+      : "/",
     build: {
       outDir: "../dist",
       minify: "terser",
       emptyOutDir: true,
       copyPublicDir: true,
-      base: `/${packageJson.name}/`,
     },
     server: {
       port: 4810,
