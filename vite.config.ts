@@ -27,7 +27,10 @@ export default defineConfig(({ mode }) => {
       copyPublicDir: true,
     },
     server: {
-      port: 4810,
+      port: 3123,
+    },
+    preview: {
+      port: 3123,
     },
     plugins: [
       {
