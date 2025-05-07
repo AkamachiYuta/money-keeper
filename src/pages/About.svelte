@@ -19,7 +19,7 @@
           </div>
         </div>
         <nav>
-          <a href={APP_REPOSITORY_URL} class="button">リポジトリ</a>
+          <a href={APP_REPOSITORY_URL} class="button ripple">リポジトリ</a>
         </nav>
       </article>
     </div>
@@ -34,7 +34,7 @@
           </div>
         </div>
         <nav>
-          <a href={APP_PROVIDER_URL} class="button">公式サイト</a>
+          <a href={APP_PROVIDER_URL} class="button ripple">公式サイト</a>
         </nav>
       </article>
     </div>

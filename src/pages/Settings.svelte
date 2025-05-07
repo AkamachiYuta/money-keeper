@@ -29,7 +29,7 @@
       <i>palette</i>
       色選択
     </label> -->
-    <button class="active">
+    <button class="ripple active">
       <i>palette</i>
       色選択
       <menu class="no-wrap transparent color-picker">

@@ -94,7 +94,7 @@
       <p>開発中のため、未実装の機能や重大な不具合があります</p>
       <div class="space"></div>
       <nav class="center-align">
-        <button onclick={getStart}>
+        <button class="ripple" onclick={getStart}>
           わかった、使ってみる
           <i>arrow_right_alt</i>
         </button>

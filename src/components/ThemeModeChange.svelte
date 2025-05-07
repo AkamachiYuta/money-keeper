@@ -13,6 +13,6 @@
   };
 </script>
 
-<button class="circle fill" aria-label="テーマ切り替え" {onclick}>
+<button class="ripple circle fill" aria-label="テーマ切り替え" {onclick}>
   <i>{themeModeButton}</i>
 </button>

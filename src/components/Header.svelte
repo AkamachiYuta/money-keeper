@@ -32,15 +32,15 @@
       <i>menu</i>
     </button>
     <div class="max"></div>
-    <button class="square round l m">
+    <button class="ripple square round l m">
       <i>add</i>
     </button>
-    <a href="dashboard" class="button fill l m" use:link>
+    <a href="dashboard" class="button ripple fill l m" use:link>
       <i>dashboard</i>
       <span>ダッシュボード</span>
     </a>
     <ThemeModeChange />
-    <!-- <a class="button circle fill">
+    <!-- <a class="button ripple circle fill">
       <i>more_vert</i>
     </a> -->
   </nav>
@@ -52,7 +52,7 @@
     <!-- <a href="/" class:active={isActivePath("/")} use:link>
       <i>timeline</i>
     </a> -->
-    <!-- <button class="square round extra s">
+    <!-- <button class="ripple square round extra s">
       <i>add</i>
     </button> -->
     <!-- <a href="/" class:active={isActivePath("/")} use:link>
