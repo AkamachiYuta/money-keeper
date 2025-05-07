@@ -1,3 +1,29 @@
+# [0.1.0](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.10...v0.1.0) (2025-05-07)
+
+
+### Add
+
+* 色選択用のカラーピッカーを導入 ([8c24ad2](https://github.com/AkamachiYuta/money-keeper/commit/8c24ad2aef48a12b95bb7ff6206875bf0a84bec6))
+
+### Change
+
+* ボタンのクリック時のアニメーションをrippleに変更 ([ab6ef5a](https://github.com/AkamachiYuta/money-keeper/commit/ab6ef5aa8b99390b5cefcb157430f4eab1ce414b))
+
+### Develop
+
+* テーマモード切り替えボタンのコードを新しい記法に更新 ([00a6030](https://github.com/AkamachiYuta/money-keeper/commit/00a60307d87d5834feb2466d0022372e84088a68))
+* テーマモード切り替えボタンのコードを新しい記法に更新など ([1cc9ac6](https://github.com/AkamachiYuta/money-keeper/commit/1cc9ac6eab419703b8b744012a19b93e603ea8f4))
+
+### Fix
+
+* アプリバーのダッシュボードボタンのリンク先が誤っていたのを修正 ([eebbe06](https://github.com/AkamachiYuta/money-keeper/commit/eebbe063f0638b5099ce92470a048b2439e85e24))
+
+### Remove
+
+* 設定から不要になったコードを削除 ([448fb9e](https://github.com/AkamachiYuta/money-keeper/commit/448fb9eca2b3834efb277b5259f6b6f865365cfe))
+
+
+
 ## [0.0.10](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.9...v0.0.10) (2025-05-07)
 
 
