@@ -1,7 +1,7 @@
 <script lang="ts">
   import { navigate } from "svelte-routing";
-  import Img01 from "../assets/Introduction/01.png";
-  import Img02 from "../assets/Introduction/02.png";
+  import Img01 from "../assets/Introduction/01.webp";
+  import Img02 from "../assets/Introduction/02.webp";
 
   const getStart = () => {
     navigate("dashboard");
@@ -10,13 +10,14 @@
 
 <section id="page-introduction">
   <h2>お財布を守るアプリ「MoneyKeeper」</h2>
+  <div class="large-space"></div>
 
   <article class="no-padding">
     <div class="grid no-space">
-      <div class="s6">
+      <div class="l6 m4 s12">
         <img class="responsive" src={Img01} alt="" />
       </div>
-      <div class="s6">
+      <div class="l6 m8 s12">
         <div class="padding large-text large-line">
           <h3>お金を前に差し出すのを辞めよう</h3>
           <hr class="medium" />
@@ -45,7 +46,7 @@
 
   <article class="no-padding">
     <div class="grid no-space">
-      <div class="s6">
+      <div class="l6 m8 s12">
         <div class="padding large-text large-line">
           <h3>本当の使いやすさを目指して</h3>
           <hr class="medium" />
@@ -66,7 +67,7 @@
           </p>
         </div>
       </div>
-      <div class="s6">
+      <div class="l6 m4 s12">
         <img class="responsive" src={Img02} alt="" />
       </div>
     </div>
@@ -100,5 +101,6 @@
       </nav>
     </div>
   </article>
+  <div class="large-space"></div>
   <div class="large-space"></div>
 </section>

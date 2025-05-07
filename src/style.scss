@@ -1,4 +1,32 @@
+@font-face {
+  font-family: 'Kananashi23';
+  src: url('./fonts/Kananashi23-Regular.woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Kananashi23';
+  src: url('./fonts/Kananashi23-Medium.woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Kananashi23';
+  src: url('./fonts/Kananashi23-Bold.woff2');
+  font-weight: 700;
+}
+
 * {
   transition: color 0.2s ease,
     background 0.2s ease;
+}
+
+:root {
+  --font: "Kananashi23", "Noto Sans JP", "Noto Color Emoji", sans-serif;
+  font-style: normal;
+}
+
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }

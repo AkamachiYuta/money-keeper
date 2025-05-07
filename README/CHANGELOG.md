@@ -1,3 +1,36 @@
+## [0.0.9](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.8...v0.0.9) (2025-05-07)
+
+
+### Add
+
+* OGP対応 ([a6bf9c8](https://github.com/AkamachiYuta/money-keeper/commit/a6bf9c8c7535b2aea2f0b801d69a1411e66cec36))
+* PWA対応 ([76354ad](https://github.com/AkamachiYuta/money-keeper/commit/76354ad7016053d09163f0f389ef096ee0144f99))
+
+### Change
+
+* ユーザーカラーに画像を設定する機能は廃止 ([89f58fc](https://github.com/AkamachiYuta/money-keeper/commit/89f58fce8d4712270ca503a9d384159af4eb7637))
+
+### Fix
+
+* イントロダクションがモバイルだと表示が崩れるのを修正 ([b096af1](https://github.com/AkamachiYuta/money-keeper/commit/b096af19eae36d3c382a114c392683fba2ad6f6d))
+
+
+
+## [0.0.8](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.7...v0.0.8) (2025-05-06)
+
+
+### Add
+
+* イントロダクションページを追加 ([d4fa147](https://github.com/AkamachiYuta/money-keeper/commit/d4fa147fe9eade26bcbdf38b07a463cdfecd03b9))
+* 各種フォントを指定、同梱 ([0568813](https://github.com/AkamachiYuta/money-keeper/commit/0568813813ac7a337480f41fff655dae97b21601))
+
+### Change
+
+* Introductionで使用する画像をWEBPに置き換え ([3f3196c](https://github.com/AkamachiYuta/money-keeper/commit/3f3196c1fe408912bee8dac0bdb6dde14ab822ea))
+* ダッシュボードのパスはdashboardに変更。および相対パスの不具合を修正 ([b8f8aee](https://github.com/AkamachiYuta/money-keeper/commit/b8f8aee3bcf55bb12d92d7bd5ca015070999ddee))
+
+
+
 ## [0.0.7](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.6...v0.0.7) (2025-05-06)
 
 
