@@ -25,3 +25,8 @@
   --font: "Kananashi23", "Noto Sans JP", "Noto Color Emoji", sans-serif;
   font-style: normal;
 }
+
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}

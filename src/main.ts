@@ -10,6 +10,8 @@ const app = mount(App, {
 })
 
 // テーマカラー：初期値またはローカルストレージからセット
-userTheme(localStorage.getItem("userThemeColor") ?? undefined);
+document.addEventListener("DOMContentLoaded", () => {
+  userTheme(localStorage.getItem("userThemeColor") ?? undefined);
+});
 
 export default app
