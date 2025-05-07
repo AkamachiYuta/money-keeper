@@ -35,7 +35,7 @@
     <button class="square round l m">
       <i>add</i>
     </button>
-    <a href="/" class="button fill l m" use:link>
+    <a href="dashboard" class="button fill l m" use:link>
       <i>dashboard</i>
       <span>ダッシュボード</span>
     </a>
