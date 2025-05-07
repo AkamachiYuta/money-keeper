@@ -8,9 +8,11 @@ export default defineConfig(({ mode }) => {
   const define = {
     APP_TITLE: process.env.VITE_APP_TITLE ? process.env.VITE_APP_TITLE : "Unknown App Title",
     APP_SHORT_TITLE: process.env.VITE_APP_SHORT_TITLE ? process.env.VITE_APP_SHORT_TITLE : "UnknownApp",
-    APP_VERSION: packageJson.version ? packageJson.version + (mode === "development" ? "-DEV" : "") : "Unknown Version",
+    APP_URL: process.env.VITE_APP_URL ? process.env.VITE_APP_URL : "UnknownApp",
     APP_PROVIDER: process.env.VITE_APP_PROVIDER ? process.env.VITE_APP_PROVIDER : "Unknown App Provider",
     APP_PROVIDER_URL: process.env.VITE_APP_PROVIDER_URL ? process.env.VITE_APP_PROVIDER_URL : "",
+    APP_PROVIDER_TWITTER: process.env.VITE_APP_PROVIDER_TWITTER ? process.env.VITE_APP_PROVIDER_TWITTER : "",
+    APP_VERSION: packageJson.version ? packageJson.version + (mode === "development" ? "-DEV" : "") : "Unknown Version",
     APP_DESCRIPTION: packageJson.description ? packageJson.description : "",
     APP_REPOSITORY_URL: packageJson.repository.url ? packageJson.repository.url.replace(/^git\+|\.git$/g, "") : "",
     APP_REPOSITORY_NAME: packageJson.repository.url ? packageJson.repository.url.replace(/^git\+|\.git$/g, "").replace(/^https:\/\/github.com\/.*\//, "") : "",
