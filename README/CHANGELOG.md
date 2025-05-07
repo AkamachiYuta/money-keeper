@@ -1,3 +1,12 @@
+## [0.0.10](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.9...v0.0.10) (2025-05-07)
+
+
+### Fix
+
+* PWAが正常に動作しない不具合を修正 ([1ce90ad](https://github.com/AkamachiYuta/money-keeper/commit/1ce90ad2fc1daac53380f1d7768a713e069ffab9))
+
+
+
 ## [0.0.9](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.8...v0.0.9) (2025-05-07)
 
 
