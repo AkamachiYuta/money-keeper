@@ -2,13 +2,6 @@
   import ColorPicker from "svelte-awesome-color-picker";
   import { userTheme } from "../components/theme";
 
-  // const oninputUserColor = (event: Event) => {
-  //   const userColorPicker = (<HTMLInputElement>event.currentTarget).value;
-  //   console.log(event);
-
-  //   if (userColorPicker !== "") userTheme(userColorPicker);
-  // };
-
   let themeMode = $state(ui("mode"));
   let themeColor = $state(localStorage.getItem("userThemeColor") ?? "#804040");
 
@@ -24,11 +17,6 @@
   <article>
     <div>ユーザーカラー</div>
     <hr class="medium" />
-    <!-- <label class="button">
-      <input type="color" oninput={oninputUserColor} />
-      <i>palette</i>
-      色選択
-    </label> -->
     <button class="ripple active">
       <i>palette</i>
       色選択
