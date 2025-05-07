@@ -1,3 +1,21 @@
+## [0.0.9](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.8...v0.0.9) (2025-05-07)
+
+
+### Add
+
+* OGP対応 ([a6bf9c8](https://github.com/AkamachiYuta/money-keeper/commit/a6bf9c8c7535b2aea2f0b801d69a1411e66cec36))
+* PWA対応 ([76354ad](https://github.com/AkamachiYuta/money-keeper/commit/76354ad7016053d09163f0f389ef096ee0144f99))
+
+### Change
+
+* ユーザーカラーに画像を設定する機能は廃止 ([89f58fc](https://github.com/AkamachiYuta/money-keeper/commit/89f58fce8d4712270ca503a9d384159af4eb7637))
+
+### Fix
+
+* イントロダクションがモバイルだと表示が崩れるのを修正 ([b096af1](https://github.com/AkamachiYuta/money-keeper/commit/b096af19eae36d3c382a114c392683fba2ad6f6d))
+
+
+
 ## [0.0.8](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.7...v0.0.8) (2025-05-06)
 
 
