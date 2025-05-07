@@ -1,5 +1,5 @@
 import { defineConfig, loadEnv } from "vite";
-import { svelte, vitePreprocess } from "@sveltejs/vite-plugin-svelte"
+import { svelte } from "@sveltejs/vite-plugin-svelte"
 import { VitePWA } from "vite-plugin-pwa";
 import packageJson from "./package.json";
 
@@ -45,9 +45,7 @@ export default defineConfig(({ mode }) => {
               define[p1] ?? match),
         },
       },
-      svelte({
-        preprocess: [vitePreprocess()],
-      }),
+      svelte(),
       VitePWA({
         injectRegister: "inline",
         registerType: "autoUpdate",
