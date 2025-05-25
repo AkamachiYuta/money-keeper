@@ -1,3 +1,16 @@
+## [0.1.1](https://github.com/AkamachiYuta/money-keeper/compare/v0.1.0...v0.1.1) (2025-05-25)
+
+
+### Add
+
+* ユーザーカラー設定にプリセットボタンを設置 ([65de262](https://github.com/AkamachiYuta/money-keeper/commit/65de262b3a7931a6bb01ed6f41dbedbb8656f073))
+
+### Fix
+
+* metaタグのtheme-colorを修正 ([93704c1](https://github.com/AkamachiYuta/money-keeper/commit/93704c192fe224f8e338a550512a9f58cd151bce))
+
+
+
 # [0.1.0](https://github.com/AkamachiYuta/money-keeper/compare/v0.0.10...v0.1.0) (2025-05-07)
 
 
