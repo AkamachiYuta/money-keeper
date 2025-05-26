@@ -46,6 +46,8 @@
     "vite-plugin-pwa": "^1.0.0"
   },
   "dependencies": {
-    "svelte-dnd-action": "^0.9.61"
+    "@types/uuid": "^10.0.0",
+    "svelte-dnd-action": "^0.9.61",
+    "uuid": "^11.1.0"
   }
 }
