@@ -1,6 +1,6 @@
 <script lang="ts">
   import ColorPicker from "svelte-awesome-color-picker";
-  import { userTheme } from "../lib/theme";
+  import { userTheme } from "../components/theme";
 
   let themeMode = $state(ui("mode"));
   let themeColor = $state(localStorage.getItem("userThemeColor") ?? "#804040");

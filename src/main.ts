@@ -3,7 +3,7 @@ import "beercss";
 import "material-dynamic-colors";
 import "./style.scss";
 import App from './App.svelte';
-import { userTheme } from "./lib/theme";
+import { userTheme } from "./components/theme";
 
 const app = mount(App, {
   target: document.getElementById('app')!,
