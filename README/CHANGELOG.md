@@ -1,3 +1,13 @@
+## [0.1.2](https://github.com/AkamachiYuta/money-keeper/compare/v0.1.1...v0.1.2) (2025-05-26)
+
+
+### Add
+
+* ダッシュボードにドラッグアンドドロップできるウィジェットを配置できる機能を実装 ([08e6e32](https://github.com/AkamachiYuta/money-keeper/commit/08e6e326a7be4de44e58dad101faf5b9afaebf7e))
+* 家計簿履歴機能の実装 ([f2bec33](https://github.com/AkamachiYuta/money-keeper/commit/f2bec33973786d4ddf840fb6caeb109994805f4f))
+
+
+
 ## [0.1.1](https://github.com/AkamachiYuta/money-keeper/compare/v0.1.0...v0.1.1) (2025-05-25)
 
 
