@@ -1,6 +1,6 @@
 <script lang="ts">
   import { dndzone } from "svelte-dnd-action";
-  import DashboardCard from "../lib/DashboardCard.svelte"; // ★パスを修正！
+  import DashboardCard from "../components/widgets/DashboardCard.svelte"; // ★パスを修正！
   import { onMount } from "svelte";
 
   // カードのデータ型を定義
