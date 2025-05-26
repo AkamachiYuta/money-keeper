@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Router, Route } from "svelte-routing";
-  import Header from "./components/Header.svelte";
+  import Header from "./lib/Header.svelte";
   import Introduction from "./pages/Introduction.svelte";
   import DashBoard from "./pages/Dashboard.svelte";
   import Settings from "./pages/Settings.svelte";
