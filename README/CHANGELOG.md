@@ -1,3 +1,17 @@
+## [0.1.3](https://github.com/AkamachiYuta/money-keeper/compare/v0.1.2...v0.1.3) (2025-05-27)
+
+
+### Add
+
+* アプリについてのページに開発者と協力してくれたAIを掲載。およびカードデザインを変更 ([7b266eb](https://github.com/AkamachiYuta/money-keeper/commit/7b266eb9eb869d86886f5ed05b166076af429a48))
+
+### Fix
+
+* スマホ表示の際に表示内容がタブバーの後ろに隠れることがある不具合の修正 ([0d86216](https://github.com/AkamachiYuta/money-keeper/commit/0d8621604ac7ec0eaa8b28aa1216aaf179f534e7))
+* 新機能のデザインや挙動周りを調整 ([6e4600c](https://github.com/AkamachiYuta/money-keeper/commit/6e4600c1ba7ac9081947954978e0cade73a03024))
+
+
+
 ## [0.1.2](https://github.com/AkamachiYuta/money-keeper/compare/v0.1.1...v0.1.2) (2025-05-26)
 
 
