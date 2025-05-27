@@ -101,6 +101,4 @@
       </nav>
     </div>
   </article>
-  <div class="large-space"></div>
-  <div class="large-space"></div>
 </section>
