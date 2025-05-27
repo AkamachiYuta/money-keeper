@@ -55,71 +55,67 @@
     // selectedAccountIdはそのままか、初期値に戻すか検討
 
     // Svelte 5 の新しいイベント発火方法: 親から渡された関数を直接呼び出す
-    addTransaction(newTransaction); // ★ここを修正！
+    addTransaction(newTransaction);
+
+    // ダイアログを閉じる
+    ui("#dialog-transaction");
   }
 </script>
 
-<div class="card p-4 m-2">
-  <h2 class="text-xl font-bold align-center">新しい取引を追加</h2>
-  <form onsubmit={handleSubmit}>
-    <label class="field label border">
-      <input type="date" bind:value={date} required />
-      日付
-    </label>
+<dialog id="dialog-transaction">
+  <h5 class="">新しい取引を追加</h5>
+  <div class="field label border">
+    <input
+      type="date"
+      id="dialog-transaction-date"
+      bind:value={date}
+      required
+    />
+    <label for="dialog-transaction-date">日付</label>
+  </div>
 
-    <div class="field label border">
-      <label>
-        <input
-          type="number"
-          bind:value={amount}
-          placeholder="金額 (例: -1500, 5000)"
-          required
-          step="any"
-        />
-        金額
-      </label>
-    </div>
+  <div class="field label border">
+    <input
+      type="number"
+      id="dialog-transaction-amount"
+      bind:value={amount}
+      required
+      step="any"
+    />
+    <label for="dialog-transaction-amount">金額</label>
+  </div>
 
-    <div class="field label border">
-      <label>
-        <input
-          type="text"
-          bind:value={description}
-          placeholder="説明 (例: 昼食代)"
-        />
-        説明
-      </label>
-    </div>
+  <div class="field label border">
+    <input
+      type="text"
+      id="dialog-transaction-description"
+      bind:value={description}
+    />
+    <label for="dialog-transaction-description">説明</label>
+  </div>
 
-    <div class="field label border">
-      <label>
-        <input
-          type="text"
-          bind:value={payee}
-          placeholder="支出先/入金元 (例: スーパー, 給料)"
-        />
-        支出先/入金元
-      </label>
-    </div>
+  <div class="field label border">
+    <input type="text" id="dialog-transaction-payee" bind:value={payee} />
+    <label for="dialog-transaction-payee">支出先/入金元</label>
+  </div>
 
-    <div class="field label border">
-      <label>
-        <select bind:value={selectedAccountId} required>
-          {#each $accounts as account}
-            <option value={account.id}>{account.name}</option>
-          {/each}
-        </select>
-        口座
-      </label>
-    </div>
+  <div class="field label border">
+    <select
+      id="dialog-transaction-account"
+      bind:value={selectedAccountId}
+      required
+    >
+      {#each $accounts as account}
+        <option value={account.id}>{account.name}</option>
+      {/each}
+    </select>
+    <label for="dialog-transaction-account">口座</label>
+  </div>
 
-    <div class="align-center">
-      <button class="button primary mt-4">
-        <i>add</i><span>取引を追加</span>
-      </button>
-    </div>
-  </form>
-</div>
+  <button class="button primary" onclick={handleSubmit}>
+    <i>add</i><span>取引を追加</span>
+  </button>
+</dialog>
 
 <style lang="scss">
   /* ... スタイルは変更なし ... */

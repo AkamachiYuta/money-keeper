@@ -8,6 +8,9 @@
   const onclickNavDrawer = () => {
     ui("#nav-drawer");
   };
+  const toggleDialog = () => {
+    ui("#dialog-transaction");
+  };
 
   // リンクが押されたときにパスを更新する
   document.addEventListener("DOMContentLoaded", () => {
@@ -32,7 +35,7 @@
       <i>menu</i>
     </button>
     <div class="max"></div>
-    <button class="ripple square round l m">
+    <button class="ripple square round l m" onclick={toggleDialog}>
       <i>add</i>
     </button>
     <a href="dashboard" class="button ripple fill l m" use:link>
@@ -52,9 +55,9 @@
     <!-- <a href="/" class:active={isActivePath("/")} use:link>
       <i>timeline</i>
     </a> -->
-    <!-- <button class="ripple square round extra s">
+    <button class="ripple square round extra s" onclick={toggleDialog}>
       <i>add</i>
-    </button> -->
+    </button>
     <!-- <a href="/" class:active={isActivePath("/")} use:link>
       <i>calendar_month</i>
     </a>

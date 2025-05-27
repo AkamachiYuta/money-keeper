@@ -2,8 +2,8 @@
   import { dndzone } from "svelte-dnd-action";
   import { onMount } from "svelte";
   import DashboardCard from "../components/widgets/DashboardCard.svelte";
-  import TransactionForm from "../components/TransactionForm.svelte";
-  import type { Transaction } from "../components/TransactionForm.svelte";
+  import TransactionForm from "../components/DialogTransaction.svelte";
+  import type { Transaction } from "../components/DialogTransaction.svelte";
   import { accounts, type Account } from "../stores/accounts"; // accountsストアをインポート
 
   // カードのデータ型を定義
@@ -24,6 +24,7 @@
     { id: "3", title: "残高の推移", content: "グラフが表示されます" },
     { id: "4", title: "最近の取引", content: "〇〇に¥500, △△に¥1,200" },
   ];
+
   // 初期状態はoriginalDashboardItemsから始まる
   let dashboardItems: DashboardItem[] = $state([...originalDashboardItems]);
 
@@ -64,6 +65,7 @@
       );
       dashboardItems = [...reorderedItems, ...newItems];
     }
+
     // ローカルストレージから取引履歴を読み込む
     const storedTransactions = localStorage.getItem("transactions");
     if (storedTransactions) {
@@ -77,11 +79,9 @@
     localStorage.setItem("transactions", JSON.stringify(transactions));
     console.log("transactions changed, saving to localStorage:", transactions); // 保存時のログ
   });
-
   // TransactionFormからのイベントハンドラ
   function handleAddTransaction(newTransaction: Transaction) {
     transactions = [...transactions, newTransaction]; // 新しい取引を追加
-    console.log("Added transaction:", newTransaction);
   }
 
   // $state()で定義したリアクティブ変数にストアの値を購読して反映させる
@@ -95,7 +95,7 @@
 </script>
 
 <section id="page-home">
-  <h1 class="align-center">ダッシュボード</h1>
+  <h2>ダッシュボード（テスト用）</h2>
   <article>
     <progress class="max inverse-primary-text" value="1802" max="3000"
     ></progress>
@@ -106,10 +106,8 @@
 
   <TransactionForm addTransaction={handleAddTransaction} />
 
-  <hr class="my-8" />
-
   <div
-    class="grid gap-4 auto"
+    class="grid"
     use:dndzone={{ items: dashboardItems, flipDurationMs }}
     onconsider={handleDndConsider}
     onfinalize={handleDndFinalize}
@@ -127,7 +125,6 @@
         {transaction.type === "expense"
           ? "-"
           : "+"}{transaction.amount.toLocaleString()}円 ({currentAccounts.find(
-          // ★ここを修正！
           (a) => a.id === transaction.accountId,
         )?.name || "不明"})
         {transaction.payee ? ` - ${transaction.payee}` : ""}
@@ -136,18 +133,3 @@
     {/each}
   </ul>
 </section>
-
-<style lang="scss">
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-  .list {
-    list-style: none;
-    padding: 0;
-  }
-  .item {
-    background-color: var(--surface-1);
-    border-radius: var(--radius-1);
-  }
-</style>
