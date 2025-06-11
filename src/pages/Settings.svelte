@@ -5,6 +5,17 @@
   let themeMode = $state(ui("mode"));
   let themeColor = $state(localStorage.getItem("userThemeColor") ?? "#804040");
 
+  // プリセットカラーのリスト
+  const presetColors = [
+    { hex: "#f0908d", name: "薄紅", emoji: "🍓" },
+    { hex: "#ee7800", name: "橙色", emoji: "🍊" },
+    { hex: "#f5e56b", name: "刈安色", emoji: "🍋" },
+    { hex: "#aacf53", name: "萌黄", emoji: "🍈" },
+    { hex: "#3b7960", name: "木賊色", emoji: "🍋‍🟩" },
+    { hex: "#1e50a2", name: "瑠璃色", emoji: "🫐" },
+    { hex: "#a59aca", name: "藤紫", emoji: "🍇" },
+  ];
+
   $effect(() => {
     userTheme(themeColor);
     console.log(themeMode);
@@ -29,69 +40,18 @@
         />
       </menu>
     </button>
-    <button
-      class="ripple border circle large-text"
-      onclick={() => {
-        themeColor = "#f0908d";
-      }}
-    >
-      🍓
-      <div class="tooltip">薄紅</div>
-    </button>
-    <button
-      class="ripple border circle large-text"
-      onclick={() => {
-        themeColor = "#ee7800";
-      }}
-    >
-      🍊
-      <div class="tooltip">橙色</div>
-    </button>
-    <button
-      class="ripple border circle large-text"
-      onclick={() => {
-        themeColor = "#f5e56b";
-      }}
-    >
-      🍋
-      <div class="tooltip">刈安色</div>
-    </button>
-    <button
-      class="ripple border circle large-text"
-      onclick={() => {
-        themeColor = "#aacf53";
-      }}
-    >
-      🍈
-      <div class="tooltip">萌黄</div>
-    </button>
-    <button
-      class="ripple border circle large-text"
-      onclick={() => {
-        themeColor = "#3b7960";
-      }}
-    >
-      🍋‍🟩
-      <div class="tooltip">木賊色</div>
-    </button>
-    <button
-      class="ripple border circle large-text"
-      onclick={() => {
-        themeColor = "#1e50a2";
-      }}
-    >
-      🫐
-      <div class="tooltip">瑠璃色</div>
-    </button>
-    <button
-      class="ripple border circle large-text"
-      onclick={() => {
-        themeColor = "#a59aca";
-      }}
-    >
-      🍇
-      <div class="tooltip">藤紫</div>
-    </button>
+
+    {#each presetColors as color}
+      <button
+        class="ripple border circle large-text"
+        onclick={() => {
+          themeColor = color.hex;
+        }}
+      >
+        {color.emoji}
+        <div class="tooltip">{color.name}</div>
+      </button>
+    {/each}
   </article>
 </section>
 
