@@ -25,11 +25,14 @@
     { id: "4", title: "最近の取引", content: "〇〇に¥500, △△に¥1,200" },
   ];
 
-  // 初期状態はoriginalDashboardItemsから始まる
-  let dashboardItems: DashboardItem[] = $state([...originalDashboardItems]);
-
   const flipDurationMs = 200; // ドラッグ後のアニメーション時間
 
+  // リアクティブ変数
+  let dashboardItems: DashboardItem[] = $state([...originalDashboardItems]);
+  let transactions: Transaction[] = $state([]);
+  let currentAccounts: Account[] = $state([]);
+
+  // ドラッグ&ドロップのイベントハンドラ
   function handleDndConsider(e: CustomEvent<{ items: DashboardItem[] }>) {
     dashboardItems = e.detail.items;
   }
@@ -42,7 +45,10 @@
     console.log("Finalized order saved:", orderedIds);
   }
 
-  let transactions: Transaction[] = $state([]);
+  // TransactionFormからのイベントハンドラ
+  function handleAddTransaction(newTransaction: Transaction) {
+    transactions = [...transactions, newTransaction]; // 新しい取引を追加
+  }
 
   onMount(() => {
     // ダッシュボードの順序を読み込むロジック
@@ -50,7 +56,6 @@
     if (storedOrder) {
       const orderedIds: string[] = JSON.parse(storedOrder);
       // 保存された順序に基づいてdashboardItemsを並べ替える
-      // 元の配列からIDを元にカードを見つけて並べ替えるロジックが必要
       const reorderedItems: DashboardItem[] = [];
       for (const id of orderedIds) {
         const item = originalDashboardItems.find((d) => d.id === id); // originalDashboardItemsは初期データ
@@ -74,18 +79,14 @@
     }
   });
 
+  // エフェクト
   // transactionsが変更されたらローカルストレージに保存する
   $effect(() => {
     localStorage.setItem("transactions", JSON.stringify(transactions));
     console.log("transactions changed, saving to localStorage:", transactions); // 保存時のログ
   });
-  // TransactionFormからのイベントハンドラ
-  function handleAddTransaction(newTransaction: Transaction) {
-    transactions = [...transactions, newTransaction]; // 新しい取引を追加
-  }
 
   // $state()で定義したリアクティブ変数にストアの値を購読して反映させる
-  let currentAccounts: Account[] = $state([]);
   $effect(() => {
     const unsubscribe = accounts.subscribe((value) => {
       currentAccounts = value;
