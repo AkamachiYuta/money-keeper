@@ -9,8 +9,7 @@ export interface Account {
 // 初期口座データ（仮）
 const initialAccounts: Account[] = [
   { id: uuidv4(), name: '現金' },
-  { id: uuidv4(), name: '銀行A' },
-  { id: uuidv4(), name: 'PayPay' },
+  { id: uuidv4(), name: '銀行' },
   { id: uuidv4(), name: 'クレジットカード' },
 ];
 

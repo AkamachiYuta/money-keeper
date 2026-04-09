@@ -12,8 +12,8 @@
     ui("#dialog-transaction");
   };
 
-  // リンクが押されたときにパスを更新する
   document.addEventListener("DOMContentLoaded", () => {
+    // リンクが押されたときにパスを更新する
     document.querySelectorAll("a:not(.button)[href]").forEach((link) => {
       link.addEventListener(
         "click",

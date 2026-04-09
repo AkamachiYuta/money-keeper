@@ -1,4 +1,5 @@
 <script lang="ts">
+  // import { link } from "svelte-routing";
   import { accounts } from "../stores/accounts";
   import { v4 as uuidv4 } from "uuid";
   let {
@@ -63,7 +64,19 @@
 </script>
 
 <dialog id="dialog-transaction">
-  <h5 class="">新しい取引を追加</h5>
+  <h5 class="">記録</h5>
+  <div class="field border">
+    <nav class="tabbed small">
+      <!-- svelte-ignore a11y_missing_attribute -->
+      <a class="max active">
+        <span>収入</span>
+      </a>
+      <!-- svelte-ignore a11y_missing_attribute -->
+      <a class="max">
+        <span>支出</span>
+      </a>
+    </nav>
+  </div>
   <div class="field label border">
     <input
       type="date"
