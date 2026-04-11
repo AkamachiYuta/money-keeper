@@ -2,7 +2,6 @@
   import assetsFavicon from "../assets/favicon.webp";
   // import assetsIconProvider from "../assets/icon_provider.svg";
   import assetsIconDeveloperADE from "../assets/developers/ade.svg";
-  import assetsIconDeveloperMikoto from "../assets/developers/Mikoto_Icon.avif";
 </script>
 
 <section id="page-about">
@@ -52,24 +51,8 @@
           alt=""
         />
         <div class="s8 padding transparent">
-          <h6 class="bold">あかいろ町開発室 (ADE)</h6>
+          <h6 class="bold">あかいろ空想空間 (ADE)</h6>
           <span>開発者</span>
-        </div>
-      </div>
-    </a>
-    <a
-      href="https://gemini.google.com/"
-      class="ripple button vertical no-padding border round s12 m6 l6"
-    >
-      <div class="grid no-space transparent">
-        <img
-          class="s4 responsive right-round"
-          src={assetsIconDeveloperMikoto}
-          alt=""
-        />
-        <div class="s8 padding transparent">
-          <h6 class="bold">ミコト</h6>
-          <span>開発者 (Gemini カスタムGem)</span>
         </div>
       </div>
     </a>
